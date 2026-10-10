@@ -1,8 +1,12 @@
 """Data for the camera-ready TikZ Figures 1, 3 and 4.
 
-Reads only the audited five-resplit CSVs under runs/rebuttal/ and writes small
-tables to paper/neurips2026/figures/data/. Every mean and Student-t(4) 95%
-half-width is asserted against the values printed in the paper (Table 1).
+Figures 1 and 3 are computed from the audited five-resplit control CSVs in
+results/toto_taxonomy/; every Figure 1 mean and Student-t(4) 95% half-width
+is asserted against Table 1 of the paper. Figure 4 is drawn from the
+interchange tables that plot_camera_ready_figures.py writes to
+paper/neurips2026/figures/data/. Outputs are small CSV tables in
+paper/neurips2026/figures/data/ and TikZ snippets in
+paper/neurips2026/figures/tikz/gen/.
 """
 import csv
 import math
@@ -10,7 +14,7 @@ import statistics
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-R3 = ROOT / "runs/rebuttal/reviewer3_controls"
+R3 = ROOT / "results/toto_taxonomy"
 OUT = ROOT / "paper/neurips2026/figures/data"
 T4 = 2.7764451051977987  # Student-t(4) 0.975 quantile
 

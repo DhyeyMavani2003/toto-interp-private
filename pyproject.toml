@@ -1,11 +1,11 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=61.0,<70", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "toto-interp"
 version = "0.1.0"
-description = "Independent interpretability research tooling for Datadog Toto"
+description = "Code for the NeurIPS 2026 paper \"What Does an Observability Foundation Model Know?\""
 readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
